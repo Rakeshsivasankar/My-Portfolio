@@ -1,0 +1,181 @@
+/* Basic Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+}
+
+body {
+    background-color: #f0f0f0; /* Light gray background */
+    color: #333; /* Dark gray text */
+    overflow-x: hidden; /* Prevent horizontal scroll for some animations */
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: sticky; /* Sticky header */
+    top: 0;
+    z-index: 100; /* Ensure header stays on top */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+/* Profile Section */
+.profile {
+    text-align: center;
+    margin-bottom: 30px;
+    animation: fadeInDown 1s ease; /* Fade in from top */
+}
+
+.profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover; /* Maintain aspect ratio */
+    border: 3px solid #fff; /* White border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: transform 0.3s ease; /* Smooth transform */
+}
+
+.profile img:hover {
+    transform: scale(1.1) rotate(10deg); /* Scale and rotate on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* More prominent shadow on hover */
+}
+
+.profile h1 {
+    margin-top: 10px;
+    color: #007bff; /* Blue heading */
+    transition: color 0.3s ease;
+}
+
+.profile h1:hover{
+    color: #0056b3;
+}
+
+.profile p {
+    color: #777; /* Lighter gray text */
+    margin-top: 5px;
+    opacity: 0; /* Initially hidden */
+    animation: fadeIn 1s 0.5s ease forwards; /* Fade in with delay */
+}
+
+/* About Section */
+.about {
+    margin-bottom: 30px;
+    animation: slideInLeft 1s ease; /* Slide in from left */
+}
+
+.about h2 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.about p {
+    line-height: 1.6; /* Improved readability */
+}
+
+/* Projects Section */
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Space between project items */
+    margin-bottom: 30px;
+    animation: fadeInUp 1s ease; /* Fade in from bottom */
+}
+
+.project-item {
+    width: 350px; /* Adjust as needed */
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.project-item:hover {
+    transform: translateY(-5px); /* Move up slightly on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* More prominent shadow on hover */
+    background-color: #f8f9fa; /* Light gray background on hover */
+}
+
+.project-item h3 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.project-item p {
+    color: #555;
+}
+
+/* Contact Section */
+.contact {
+    background-color: #333;
+    color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    animation: zoomIn 1s ease; /* Zoom in animation */
+}
+
+.contact h2 {
+    margin-bottom: 20px;
+}
+
+.contact a {
+    color: #007bff; /* Blue link color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact a:hover {
+    color: #fff; /* White link color on hover */
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: relative; /* For the pseudo-element */
+    animation: slideInUp 1s ease;
+}
+
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInDown {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideInLeft {
+    from { transform: translateX(-20px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
